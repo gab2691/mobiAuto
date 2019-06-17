@@ -62,7 +62,7 @@ public class CountCreepyMoments {
         ArrayList<CountCreepyMoments> countCreepyMomentsArrayList = new ArrayList<>();
         countCreepyMomentsArrayList.add(new CountCreepyMoments("11:11"));
         countCreepyMomentsArrayList.add(new CountCreepyMoments("13:13"));
-        countCreepyMomentsArrayList.add(new CountCreepyMoments("14:14"));
+        countCreepyMomentsArrayList.add(new CountCreepyMoments("14:10"));
         countCreepyMomentsArrayList.add(new CountCreepyMoments("12:34"));
         countCreepyMomentsArrayList.add(new CountCreepyMoments("10:00"));
         System.out.println(CountCreepyMoments.countCreepyMoments(countCreepyMomentsArrayList));
