@@ -31,22 +31,26 @@ public class CountCreepyMoments {
     public static Integer countCreepyMoments(List<CountCreepyMoments> countCreepyMoments ){
         Integer result = 0;
         for (CountCreepyMoments x : countCreepyMoments){
+            try {
 
-            //AB:AB
-            if(x.momento.toCharArray()[0] == x.momento.toCharArray()[3] && x.momento.toCharArray()[1] == x.momento.toCharArray()[4] &&
-                x.momento.toCharArray()[1] != x.momento.toCharArray()[3]) {
-                result += x.resultado = 1;
-            }
+                //AB:AB
+                if (x.momento.toCharArray()[0] == x.momento.toCharArray()[3] && x.momento.toCharArray()[1] == x.momento.toCharArray()[4] &&
+                        x.momento.toCharArray()[1] != x.momento.toCharArray()[3]) {
+                    result += x.resultado = 1;
+                }
 
-            //AA:BB && AA:AA
-            if(x.momento.toCharArray()[0] == x.momento.toCharArray()[1] && x.momento.toCharArray()[3] == x.momento.toCharArray()[4] ||
-                       x.momento.toCharArray()[0] == x.momento.toCharArray()[1] && x.momento.toCharArray()[0] == x.momento.toCharArray()[1]){
-                result += x.resultado =1;
-            }
+                //AA:BB && AA:AA
+                if (x.momento.toCharArray()[0] == x.momento.toCharArray()[1] && x.momento.toCharArray()[3] == x.momento.toCharArray()[4] ||
+                        x.momento.toCharArray()[0] == x.momento.toCharArray()[1] && x.momento.toCharArray()[0] == x.momento.toCharArray()[1]) {
+                    result += x.resultado = 1;
+                }
 
-            //AB:BA
-            if(x.momento.toCharArray()[0] == x.momento.toCharArray()[4] && x.momento.toCharArray()[2] == x.momento.toCharArray()[3]) {
-                result = x.resultado = 1;
+                //AB:BA
+                if (x.momento.toCharArray()[0] == x.momento.toCharArray()[4] && x.momento.toCharArray()[2] == x.momento.toCharArray()[3]) {
+                    result = x.resultado = 1;
+                }
+            }catch(Exception ex){
+                ex.printStackTrace();
             }
 
         }

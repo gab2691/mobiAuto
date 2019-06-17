@@ -47,11 +47,15 @@ public class TimeFutebol {
 
 	public Integer getChampionPoints(List<TimeFutebol> timeFutebolList){
 		Integer result = 0;
-		for(TimeFutebol x: timeFutebolList){
-			x.setTotal(x.getTotal() + (x.getVitoria() * 3) + x.getEmpates());
-			if(x.getTotal() > result){
-				result = x.getTotal();
+		try {
+			for (TimeFutebol x : timeFutebolList) {
+				x.setTotal(x.getTotal() + (x.getVitoria() * 3) + x.getEmpates());
+				if (x.getTotal() > result) {
+					result = x.getTotal();
+				}
 			}
+		}catch (Exception ex){
+			ex.printStackTrace();
 		}
 		return result;
 	}

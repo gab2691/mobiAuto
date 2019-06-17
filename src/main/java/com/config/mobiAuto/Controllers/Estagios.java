@@ -53,11 +53,15 @@ public class Estagios {
 
 	public List<String> resultEstrelas(List<Estagios> estagios) {
 		List<String> resultadoEstagios = new ArrayList<>();
-		for (Estagios x : estagios) {
-			resultadoEstagios.add("Marvin tem *" + x.estrelas + " estrelas no estagio " + x.getID());
-			this.total += x.estrelas;
+		try {
+			for (Estagios x : estagios) {
+				resultadoEstagios.add("Marvin tem *" + x.estrelas + " estrelas no estagio " + x.getID());
+				this.total += x.estrelas;
+			}
+			resultadoEstagios.add("Total de Estrelas " + this.total);
+		}catch(Exception ex){
+			ex.printStackTrace();
 		}
-		resultadoEstagios.add("Total de Estrelas " + this.total);
 		return resultadoEstagios;
 	}
 
